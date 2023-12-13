@@ -7,19 +7,29 @@ const ChallengesVideoHome = () => {
             <div className={'row'}>
                 <div className={'col-12'}>
                     <div className={'d-flex justify-content-center mt-5 pt-5'}>
-                        <video
+                        <video controls>
+                            <source
+                                src={
+                                    'https://dhr.digikala.com/api/v1/stream/Teaser.mp4'
+                                }
+                                type='video/mp4'
+                            />
+                        </video>
+
+                        {/* <video
                             loop
                             playsInline
                             autoPlay
-                            muted
                             className={'react-player'}
                             width={'100%'}
                             controls>
                             <source
-                                src={'https://dhr.digikala.com/api/v1/stream/Teaser.mp4'}
+                                src={
+                                    'https://dhr.digikala.com/api/v1/stream/Teaser.mp4'
+                                }
                                 type='video/mp4'
                             />
-                        </video>
+                        </video> */}
                         {/* <ReactPlayer
                             className={'react-player'}
                             play='true'
