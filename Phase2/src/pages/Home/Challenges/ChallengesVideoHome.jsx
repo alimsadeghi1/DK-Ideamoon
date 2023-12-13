@@ -1,5 +1,6 @@
 import ReactPlayer from 'react-player';
 // import vid from '../../../../video/Teaser.mp4';
+import ReactHlsPlayer from 'react-hls-player';
 
 const ChallengesVideoHome = () => {
     return (
@@ -31,12 +32,12 @@ const ChallengesVideoHome = () => {
                             />
                         </video> */}
                         <ReactPlayer
-                            className={'react-player'}
                             play='true'
-                            url={`https://dhr.digikala.com/api/v1/stream/Teaser.mp4`}
                             controls={true}
                             muted={false}
                             progressInterval={100}
+                            className={'react-player'}
+                            url={`https://www.apiacademy.tritapp.net/v1/stream/education/introMovie/1578902495000.mp4`}
                         />
                     </div>
                 </div>
