@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player';
 // import vid from '../../../../video/Teaser.mp4';
-import ReactHlsPlayer from 'react-hls-player';
+// import ReactHlsPlayer from 'react-hls-player';
 
 const ChallengesVideoHome = () => {
     return (
