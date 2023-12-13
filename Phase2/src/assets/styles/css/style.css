@@ -1,0 +1,1671 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Bahman";
+    src: local("Bahman"), url(../../fonts/Bahman.ttf);
+}
+
+@font-face {
+    font-family: "Bakh";
+    src: local("Bakh"), url(../../fonts/bakh/Fa/Yekan\ Bakh\ FA\ 04\ Regular.ttf);
+}
+
+@font-face {
+    font-family: "Bakh - Fat";
+    src: local("Bakh - Fat"), url(../../fonts/bakh/Fa/Yekan\ Bakh\ FA\ 08\ Fat.ttf);
+}
+
+body {
+    background-color: rgba(5, 7, 44, 1);
+    min-height: 100vh;
+    color: #fff;
+    font-family: Bakh, sans-serif;
+}
+
+.my-navbar {
+    border-radius: 14px;
+    background: url("../../images/Noise.png"), #191c3e;
+    backdrop-filter: blur(22px);
+    font-family: Bakh, sans-serif;
+}
+
+.nav-text {
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-new {
+    border-radius: 50px;
+    background: #ff521a;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.selected-nav {
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+}
+
+.stories-boxes {
+    border-radius: 34px;
+    backdrop-filter: blur(22px);
+    background: url(../../images/Noise.png), #191c3e;
+    background-repeat: repeat;
+    background-size: cover;
+    border: 2px solid rgba(255, 255, 255, 0.11);
+    opacity: 1 !important;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.stories-boxes:hover {
+    border: 2px solid #c92fff;
+}
+
+.stories-btn {
+    background-color: white;
+    font-size: 12px;
+    color: #363853;
+    border-radius: 40px;
+    max-width: 160px;
+    padding: 14px 24px;
+}
+
+.stories-disabled-btn {
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    display: flex;
+    padding: 14px 20px;
+    max-width: 60%;
+}
+
+.digiLogo {
+    width: 72px;
+    height: 26px;
+    object-fit: cover;
+}
+
+.home-earth-bg {
+    position: absolute;
+    top: 0;
+    background-image: url(../../images/Earth-Background.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 70%;
+    height: 40vh !important;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    mix-blend-mode: luminosity;
+    z-index: -1;
+}
+
+.beginning-btn {
+    display: flex;
+    max-width: 194px;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: #820bff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: inline-flex;
+    padding: 20px;
+    align-items: center;
+    border-radius: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    background: #191c3e;
+    backdrop-filter: blur(22px);
+    cursor: pointer;
+}
+
+.story-box {
+    border-radius: 14px;
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.53);
+    background: #191c3e;
+    backdrop-filter: blur(10.5px);
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.story-navigation {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: #820bff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.story-navigation.off {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: #460c96;
+    font-size: 14px;
+    cursor: text;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease backwards;
+}
+
+.timer {
+    display: flex;
+    width: 268px;
+    padding: 6px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 0px 0px 30px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(27px);
+    z-index: 23;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.challenge-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 34px;
+    border: 2px solid #323553;
+    backdrop-filter: blur(22px);
+    padding: 30px;
+    background: #191c3e url(../../images/Noise.png) repeat;
+    background-size: cover;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.challenge-box:hover {
+    border: 2px solid #c92fff;
+}
+
+.challenge-box-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 111;
+}
+
+.challenge-box-name {
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+}
+
+.challenges-name {
+    color: #FFF;
+    text-align: center;
+    font-family: Bakh;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+}
+
+.idea-btn-label {
+    display: flex;
+    padding: 10px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px 16px 0px 0px;
+    border-top: 1px solid #363853;
+    border-right: 1px solid #363853;
+    border-left: 1px solid #363853;
+    background: #05072C;
+    max-width: 180px;
+    margin-left: auto;
+}
+
+
+.idea-btn-input {
+    display: flex;
+    width: 328px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px 0px 16px 16px;
+    border: 1px solid #363853;
+    background: #05072C;
+    transition: all .2s linear;
+    color: white;
+}
+
+.idea-btn-input:focus {
+    border: 1px solid #820BFF !important;
+    outline: 0;
+}
+
+.idea-btn-label-focus {
+    display: flex;
+    padding: 10px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px 16px 0px 0px;
+    border-top: 1px solid #820BFF;
+    border-right: 1px solid #820BFF;
+    border-left: 1px solid #820BFF;
+    background: #05072C;
+    max-width: 180px;
+    margin-left: auto;
+    transition: all .2s linear;
+}
+
+.idea-textarea {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 16px 0px 16px 16px;
+    border: 1px solid #363853;
+    background: #05072C;
+    resize: none !important;
+    transition: all .2s linear;
+    text-align: right;
+    color: white;
+    min-height: 250px;
+}
+
+.idea-textarea:focus {
+    border: 1px solid #820BFF !important;
+    outline: 0;
+}
+
+.idea-file {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 16px 0px 16px 16px;
+    border: 1px solid #363853;
+    background: #05072C;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .story-detail-title {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .react-player2 {
+        width: 320px !important;
+        height: 250px !important;
+        margin-top: -5vh;
+    }
+
+    .react-player2 video {
+        width: 320px !important;
+        height: 250px !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .react-player2 {
+        width: 320px !important;
+        height: 250px !important;
+        margin-top: -1vh;
+    }
+
+    .react-player2 video {
+        width: 320px !important;
+        height: 250px !important;
+    }
+    .story-detail-title {
+        font-size: 30px;
+        font-weight: 900;
+        font-family: "Bakh - Fat" !important;
+    }
+
+    .home-earth-bg {
+        position: absolute;
+        top: 0;
+        background-image: url(../../images/Earth-Background.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: 696px !important;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        mix-blend-mode: luminosity;
+        z-index: -1;
+    }
+
+    .my-navbar {
+        border-radius: 14px;
+        backdrop-filter: none;
+        background: none, none !important;
+    }
+
+    .digiLogo {
+        width: 130px;
+        height: 40px;
+        object-fit: cover;
+    }
+
+    .home-titles {
+        font-size: 44px;
+        font-weight: 950;
+        text-shadow: 0px 4px 54px rgba(255, 255, 255, 0.25);
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-title {
+        font-weight: 900;
+        font-size: 40px !important;
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-description {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .stories-btn {
+        background-color: white;
+        font-size: 12px;
+        color: #363853;
+        width: 60% !important;
+        border-radius: 40px;
+    }
+
+    .stories-disabled-btn {
+        border-radius: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        display: flex;
+        padding: 14px 20px;
+        max-width: 60% !important;
+    }
+
+    .stories-bg {
+        height: 240px;
+        width: 230px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -8vh;
+    }
+
+    .stories-bg1 {
+        height: 240px;
+        width: 230px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg2 {
+        height: 250px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.25;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg3 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg4 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg5 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-stones-1 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-1 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .stories-stones-2-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2-2 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-3 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-3 img {
+        width: 83px;
+        height: 100px;
+    }
+
+    .stories-stones-4 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-4 img {
+        width: 83px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .stories-stones-5 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-5 img {
+        width: 92px;
+        height: 106px;
+    }
+
+    .stories-stones-6 {
+        position: absolute;
+        top: 0vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-6 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .beginning-stones-2 {
+        position: absolute;
+        bottom: 0;
+        right: -4vw;
+    }
+
+    .beginning-stones-2 img {
+        width: 109.011px;
+        height: 102.807px;
+        transform: rotate(-15.788deg);
+    }
+
+    .story-box {
+        border-radius: 14px;
+        border: none;
+        background: transparent;
+        backdrop-filter: none;
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .story-bg-1 {
+        background-image: url(../../images/Isolation_Mode.png);
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .react-player video {
+        width: auto !important;
+        height: 250px !important;
+        max-width: 320px;
+        margin-top: -10vh;
+    }
+
+    .react-player {
+        width: auto !important;
+        height: 250px !important;
+        max-width: 320px;
+        margin-top: -10vh;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .story-detail-title {
+        font-size: 30px;
+        font-family: "Bakh - Fat" !important;
+    }
+
+    .my-navbar {
+        border-radius: 14px;
+        backdrop-filter: none;
+        background: none, none !important;
+    }
+
+    .stories-bg1 {
+        height: 240px;
+        width: 230px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg2 {
+        height: 250px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.25;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg3 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg4 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg5 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-stones-1 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-1 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .stories-stones-2-2 {
+        position: absolute;
+        bottom: -2vw;
+        left: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2-2 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-3 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-3 img {
+        width: 83px;
+        height: 100px;
+    }
+
+    .stories-stones-4 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-4 img {
+        width: 83px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .stories-stones-5 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-5 img {
+        width: 92px;
+        height: 106px;
+    }
+
+    .stories-stones-6 {
+        position: absolute;
+        top: 0vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-6 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .beginning-stones-2 img {
+        width: 109.011px;
+        height: 102.807px;
+        transform: rotate(-15.788deg);
+    }
+
+    .story-box {
+        border-radius: 14px;
+        border: none;
+        background: transparent;
+        backdrop-filter: blur(10.5px);
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .story-detail-title {
+        font-size: 30px;
+        font-weight: 900;
+        font-family: "Bakh" !important;
+    }
+
+    .my-navbar {
+        border-radius: 14px;
+        backdrop-filter: none;
+        background: none, none !important;
+    }
+
+    .home-titles {
+        font-size: 75px;
+        font-weight: 950;
+        text-shadow: 0px 4px 54px rgba(255, 255, 255, 0.25);
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-title {
+        font-weight: 900;
+        font-size: 40px;
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-description {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .stories-bg1 {
+        height: 240px;
+        width: 230px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg2 {
+        height: 250px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.25;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg3 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg4 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg5 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .story-stone-1 {
+        position: absolute;
+        bottom: 20vh;
+        left: -3vw;
+        z-index: 222;
+        display: none;
+    }
+
+    .story-stone-1 img {
+        width: 77.486px;
+        height: 82.064px;
+        transform: rotate(52.676deg);
+        object-fit: cover;
+        display: none;
+    }
+
+    .story-stone-2 {
+        position: absolute;
+        top: 10vh;
+        right: -5vw;
+        z-index: 222;
+        display: none;
+    }
+
+    .story-stone-2 img {
+        width: 124.993px;
+        height: 124.993px;
+        object-fit: cover;
+        display: none;
+    }
+
+    .stories-stones-2-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2-2 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-3 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-3 img {
+        width: 83px;
+        height: 100px;
+    }
+
+    .stories-stones-4 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-4 img {
+        width: 83px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .stories-stones-5 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-5 img {
+        width: 92px;
+        height: 106px;
+    }
+
+    .stories-stones-6 {
+        position: absolute;
+        top: 0vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-6 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .beginning-stones-2 img {
+        width: 109.011px;
+        height: 102.807px;
+        transform: rotate(-15.788deg);
+    }
+
+    .story-box {
+        border-radius: 14px;
+        border: none;
+        background: transparent;
+        backdrop-filter: blur(10.5px);
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .story-stone-1 {
+        position: absolute;
+        bottom: 20vh;
+        left: -3vw;
+        z-index: 222;
+    }
+
+    .story-stone-1 img {
+        width: 77.486px;
+        height: 82.064px;
+        transform: rotate(52.676deg);
+        object-fit: cover;
+    }
+
+    .story-stone-2 {
+        position: absolute;
+        top: 10vh;
+        right: -5vw;
+        z-index: 222;
+    }
+
+    .story-stone-2 img {
+        width: 124.993px;
+        height: 124.993px;
+        object-fit: cover;
+    }
+
+    .react-player2 {
+        width: 500px !important;
+        height: 300px !important;
+    }
+
+    .react-player2 video {
+        width: 500px !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) and (max-height: 450px) {
+
+    .react-player video {
+        width: 320px !important;
+        height: 300px !important;
+    }
+
+    .react-player {
+        width: 320px !important;
+        height: 300px !important;
+        margin-top: -10vh;
+    }
+
+
+    .story-detail-title {
+        font-size: 30px;
+        font-weight: 900;
+        font-family: "Bakh - Fat" !important;
+    }
+
+    .my-navbar {
+        border-radius: 14px;
+        backdrop-filter: none;
+        background: none, none !important;
+    }
+
+    .home-titles {
+        font-size: 75px;
+        font-weight: 950;
+        text-shadow: 0px 4px 54px rgba(255, 255, 255, 0.25);
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-title {
+        font-weight: 900;
+        font-size: 40px;
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-description {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .stories-bg1 {
+        height: 240px;
+        width: 230px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg2 {
+        height: 250px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.25;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg3 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg4 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg5 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-stones-1 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-1 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-2 {
+        position: absolute;
+        top: 0vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .stories-stones-2-2 {
+        position: absolute;
+        bottom: -2vw;
+        left: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2-2 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-3 {
+        position: absolute;
+        top: 2vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-3 img {
+        width: 83px;
+        height: 100px;
+    }
+
+    .stories-stones-4 {
+        position: absolute;
+        top: 6vw;
+        left: 0vw;
+        z-index: 22;
+    }
+
+    .stories-stones-4 img {
+        width: 83px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .stories-stones-5 {
+        position: absolute;
+        bottom: -2vw;
+        left: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-5 img {
+        width: 92px;
+        height: 106px;
+    }
+
+    .stories-stones-6 {
+        position: absolute;
+        top: 0vw;
+        right: -2vw;
+        z-index: 22;
+    }
+
+    .stories-stones-6 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .beginning-stones-2 img {
+        width: 109.011px;
+        height: 102.807px;
+        transform: rotate(-15.788deg);
+    }
+
+    .story-box {
+        border-radius: 14px;
+        border: none;
+        background: transparent;
+        backdrop-filter: blur(10.5px);
+        max-width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .beginning-stones-1 {
+        display: none;
+    }
+    .stone-1-animation {
+        display: none;
+    }
+
+    .beginning-stones-2 {
+        display: none;
+    }
+    .stone-2-animation {
+        display: none;
+    }
+    .beginning-stones-3{
+        display: none;
+    } .stone-3-animation {
+        display: none;
+    }
+    .beginning-stones-4{
+        display: none;
+    }
+    .stone-4-animation {
+        display: none;
+    }
+
+    .react-player2 {
+        width: 500px !important;
+        height: 300px !important;
+    }
+
+    .react-player2 video {
+        width: 500px !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+
+
+    .story-stone-1 {
+        position: absolute;
+        bottom: 20vh;
+        left: -3vw;
+        z-index: 222;
+    }
+
+    .story-stone-1 img {
+        width: 77.486px;
+        height: 82.064px;
+        transform: rotate(52.676deg);
+        object-fit: cover;
+    }
+
+    .story-stone-2 {
+        position: absolute;
+        top: 10vh;
+        right: -5vw;
+        z-index: 222;
+    }
+
+    .story-stone-2 img {
+        width: 124.993px;
+        height: 124.993px;
+        object-fit: cover;
+    }
+
+    .story-bg-1 {
+        background-image: url(../../images/Isolation_Mode.png);
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .story-detail-title {
+        font-size: 45px;
+        font-weight: 900;
+        font-family: "Bakh - Fat";
+    }
+
+    .story-detail-img {
+        height: 390px;
+    }
+
+    .home-titles {
+        font-size: 75px;
+        font-weight: 950;
+        text-shadow: 0px 4px 54px rgba(255, 255, 255, 0.25);
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-title {
+        font-weight: 950;
+        font-size: 40px;
+        letter-spacing: 1px;
+        font-family: Bahman, sans-serif !important;
+    }
+
+    .stories-description {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .stories-bg1 {
+        height: 300px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg2 {
+        height: 250px;
+        width: 250px;
+        left: 0;
+        right: 0;
+        opacity: 0.25;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-bg3 {
+        height: 210px;
+        width: 270px;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: bottom;
+        background-size: cover;
+        bottom: -5vh;
+    }
+
+    .stories-boxes-bg {
+        background: linear-gradient(90deg, #05072c 0%, rgba(5, 7, 44, 0) 49.95%),
+        linear-gradient(270deg, #05072c 0%, rgba(5, 7, 44, 0) 50.05%),
+        linear-gradient(
+                180deg,
+                rgba(5, 7, 44, 0) 0%,
+                rgba(5, 7, 44, 0) 0.01%,
+                #04052b 100%,
+                #05072c 100%
+        ),
+        linear-gradient(180deg, #05072c 0%, rgba(5, 7, 44, 0) 23.48%),
+        url("../../images/Dastan-Background.png"),
+        lightgray -205.807px 0px / 134.059% 100% no-repeat;
+    }
+
+    .stories-stones-1 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-1 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .stories-stones-2-2 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-2-2 img {
+        width: 127px;
+        height: 127px;
+    }
+
+    .stories-stones-3 {
+        position: absolute;
+        top: 0vw;
+        right: 0vw;
+        z-index: 22;
+    }
+
+    .stories-stones-3 img {
+        width: 83px;
+        height: 100px;
+    }
+
+    .stories-stones-4 {
+        position: absolute;
+        top: 0vw;
+        right: 0vw;
+        z-index: 22;
+    }
+
+    .stories-stones-4 img {
+        width: 83px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .stories-stones-5 {
+        position: absolute;
+        top: 0vw;
+        right: 0vw;
+        z-index: 22;
+    }
+
+    .stories-stones-5 img {
+        width: 92px;
+        height: 106px;
+    }
+
+    .stories-stones-6 {
+        position: absolute;
+        top: 0vw;
+        right: -1vw;
+        z-index: 22;
+    }
+
+    .stories-stones-6 img {
+        width: 111px;
+        height: 92px;
+    }
+
+    .beginning-stones-1 {
+        position: absolute;
+        top: 0;
+        left: 6.5vw;
+    }
+
+    .beginning-stones-1 img {
+        width: 119.137px;
+        height: 105.088px;
+        transform: rotate(-75deg);
+    }
+
+    .beginning-stones-2 {
+        position: absolute;
+        bottom: 0;
+        left: 6.5vw;
+    }
+
+    .beginning-stones-2 img {
+        width: 210.798px;
+        height: 198.801px;
+        transform: rotate(-15.788deg);
+    }
+
+    .beginning-stones-3 {
+        position: absolute;
+        top: 0;
+        right: 6.5vw;
+    }
+
+    .beginning-stones-3 img {
+        width: 144px;
+        height: 127px;
+    }
+
+    .beginning-stones-4 {
+        position: absolute;
+        bottom: 0;
+        right: 6.5vw;
+    }
+
+    .beginning-stones-4 img {
+        width: 111.409px;
+        height: 84.942px;
+        transform: rotate(11.431deg);
+    }
+
+    .react-player video {
+        width: 700px !important;
+        height: 400px !important;
+    }
+
+    .react-player {
+        width: 700px !important;
+        height: 400px !important;
+        margin-top: -10vh;
+    }
+
+
+    .react-player2 {
+        width: 500px !important;
+        height: 300px !important;
+    }
+
+    .react-player2 video {
+        width: 500px !important;
+        height: 300px !important;
+    }
+}
+
+.stone-1-animation {
+    animation: stone-1 3s linear infinite;
+}
+
+@keyframes stone-1 {
+    0% {
+        left: 2vw;
+        transform: scale(1, 1);
+    }
+    50% {
+        left: 3vw;
+        transform: scale(0.9, 0.9);
+    }
+    100% {
+        left: 2vw;
+        transform: scale(1, 1);
+    }
+}
+
+.stone-2-animation {
+    animation: stone-2 3s linear infinite;
+}
+
+@keyframes stone-2 {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.stone-3-animation {
+    animation: stone-3 3s linear infinite;
+}
+
+@keyframes stone-3 {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.stone-4-animation {
+    animation: stone-4 3s linear infinite;
+}
+
+@keyframes stone-4 {
+    0% {
+        right: 2vw;
+    }
+    50% {
+        right: 3vw;
+        bottom: 1.5vw;
+    }
+    100% {
+        right: 2vw;
+    }
+}
+
+.stories-bg4 {
+    height: 320px;
+    width: 270px;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: bottom;
+    background-size: cover;
+    bottom: -5vh;
+}
+
+.stories-bg5 {
+    height: 210px;
+    width: 280px;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    bottom: -5vh;
+}
+
