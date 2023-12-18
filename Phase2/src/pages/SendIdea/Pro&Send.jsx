@@ -137,7 +137,7 @@ const ProSend = () => {
                                     className={'w-100'}
                                     style={{ display: 'none' }}
                                 />
-                                انتخاب فایل
+                                {selectedFile?.name || 'انتخاب فایل'}
                             </label>
                         </div>
                         <label

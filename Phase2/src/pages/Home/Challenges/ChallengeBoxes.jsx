@@ -2,27 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
-const challenges = [
-    {
-        title: 'چالش اول',
-    },
-    {
-        title: 'چالش دوم',
-    },
-    {
-        title: 'چالش سوم',
-    },
-    {
-        title: 'چالش چهارم',
-    },
-    {
-        title: 'چالش پنجم',
-    },
-    {
-        title: 'چالش ششم',
-    },
-];
-
 const ChallengeBoxes = () => {
     const navigate = useNavigate();
     const [person, setPerson] = useState(true);
@@ -32,6 +11,7 @@ const ChallengeBoxes = () => {
 
     return (
         <div dir='rtl' className={'container mt-5'}>
+            <h6 style={{ fontWeight: 'bold' }} className='font-bold'>فیلتر بر اساس:</h6>
             <div className='d-flex justify-content-start gap-2 mb-4'>
                 <button
                     onClick={() => setPerson(true)}
@@ -90,7 +70,7 @@ const ChallengeBoxes = () => {
                                       <div class='challenge-box-name'>
                                           {challenge.name}
                                       </div>
-                                      <p>{item.name}</p>
+                                      {/* <p>{item.name}</p> */}
                                       <div class='stories-btn text-black w-100 mt-3 text-center'>
                                           مشاهده چالش
                                       </div>
