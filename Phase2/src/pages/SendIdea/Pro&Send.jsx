@@ -62,6 +62,9 @@ const ProSend = () => {
                     <div className={'idea-btn-label'}>
                         <div className={'pt-1'} style={{ fontSize: '14px' }}>
                             پروپوزال
+                            <div>
+                            <small>(در صورت نیاز)</small>
+                            </div>
                         </div>
                         <div>
                             <svg
